@@ -9,6 +9,7 @@ import { authRateLimiter } from "../middleware/rateLimiter.middleware";
 
 const router = Router();
 
+
 // POST /api/auth/register — Create a new user account
 router.post("/register", authRateLimiter, validate(registerSchema), authController.register);
 
