@@ -6,7 +6,6 @@ import { authenticate } from "../middleware/auth.middleware";
 import { authorizeAdmin } from "../middleware/role.middleware";
 
 const router = Router();
-
 router.use(authenticate, authorizedAdmin);
 
 // GET /api/admin/stats — Dashboard overview statistics
